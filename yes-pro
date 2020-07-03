@@ -1,0 +1,5 @@
+if [ -z "$1" ];then
+	exit 1
+fi
+clear
+while true;do echo -en $1;trap "echo quiting;sleep 0.1;break" INT QUIT HUP;done
